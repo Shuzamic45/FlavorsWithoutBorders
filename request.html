@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    Author: Adam Gregor
+    Course: Web Design
+    Assignment: GitHub Pages Site
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recipe Request - Flavors Without Borders</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* form-specific styles kept internal for the page */
+    .request-panel{
+      background:var(--lavender);
+      border-radius:24px;
+      padding:22px;
+    }
+    .form-row{
+      display:flex;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .form-row .field{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+    }
+    label{ font-size:14px; font-weight:600; margin-bottom:6px; color:var(--text); }
+    input[type="text"], input[type="email"], textarea, select{
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(0,0,0,0.08);
+      font-size:14px;
+      background:white;
+    }
+    textarea{ min-height:120px; resize:vertical; }
+    .submit-row{ display:flex; justify-content:flex-end; margin-top:14px; }
+    .btn{
+      padding:10px 16px;
+      border-radius:10px;
+      border:none;
+      background:linear-gradient(90deg,var(--purple),var(--purple-light));
+      color:white;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .help{ font-size:13px; color:var(--muted); margin-top:6px; }
+    @media (max-width:780px){
+      .form-row{ flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <img src="images/flavors-logo.png" class="logo" alt="Flavors Without Borders Logo">
+      <div>
+        <h1 class="site-title" style="margin:0;">Flavor Without Borders</h1>
+        <div class="site-sub">Around the World with flavors</div>
+      </div>
+    </header>
+
+    <div class="hr" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="details.html">Recipe Details</a>
+      <a href="history.html">Recipe History</a>
+      <a href="request.html">Recipe Request</a>
+    </nav>
+
+    <main class="round-panel" aria-labelledby="requestHeading">
+      <h2 id="requestHeading" style="margin-top:0;">Request a Recipe</h2>
+      <p style="color:var(--muted); line-height:1.6;">
+        Want your family’s dish or a regional favorite featured here? Fill out the form and we’ll consider adding it.
+        This is a static form placeholder; to collect submissions you'll wire this to a backend or an email service.
+      </p>
+
+      <section class="request-panel" aria-labelledby="formHeading">
+        <h3 id="formHeading" style="margin-top:0; margin-bottom:8px;">Recipe Submission</h3>
+
+        <form id="recipeRequest" action="#" method="post" enctype="multipart/form-data">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="dish">Dish name</label>
+              <input id="dish" name="dish" type="text" placeholder="Example: Grandma's Beef Rendang" required>
+            </div>
+            <div class="field">
+              <label for="origin">Cuisine / Origin</label>
+              <select id="origin" name="origin">
+                <option value="">Choose region</option>
+                <option>Thai</option>
+                <option>Indian</option>
+                <option>Moroccan</option>
+                <option>Caribbean</option>
+                <option>Latin American</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field" style="flex:1 1 100%;">
+              <label for="story">Why is this dish important to you? (short story)</label>
+              <textarea id="story" name="story" placeholder="Tell us about the family, festival or reason this dish matters..." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="photo">Photo (optional)</label>
+              <input id="photo" name="photo" type="file" accept="image/*">
+              <div class="help">Accepted: JPG, PNG. Max file size depends on your server/upload handler.</div>
+            </div>
+
+            <div class="field">
+              <label for="instructions">Do you have a full recipe / instructions?</label>
+              <select id="instructions" name="instructions">
+                <option value="">Select</option>
+                <option value="yes">Yes — include with submission</option>
+                <option value="no">No — I'd like help formatting</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn">Send Request</button>
+          </div>
+
+          <div style="margin-top:12px; color:var(--muted); font-size:13px;">
+            Note: This form is a static placeholder. To accept real submissions wire the form to a server endpoint or a service like Formspree, Netlify Forms, or an email backend.
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>Adam Gregor</div>
+      <div>amgregor@email.sc.edu</div>
+      <div style="font-weight:700">www.Flavorswithborders.com</div>
+    </footer>
+
+  </div>
+</body>
+</html>
