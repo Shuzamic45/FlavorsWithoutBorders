@@ -7,7 +7,7 @@
     Assignment: GitHub Pages Site
   -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Recipes - Flavors Without Borders</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,10 +15,10 @@
   <div class="container">
 
     <header class="header">
-      <img src="images/flavors-logo.png" class="logo" alt="Flavors Without Borders Logo">
-      <div>
-        <h1 class="site-title" style="margin:0;">Flavor Without Borders</h1>
-        <div class="site-sub">Around the World with flavors</div>
+      <img src="images/flavors-logo.png" alt="Flavors Without Borders Logo" class="logo">
+      <div class="header-text">
+        <h1 class="site-title">Flavor Without Borders</h1>
+        <p class="site-sub">Around the World with flavors</p>
       </div>
     </header>
 
@@ -26,15 +26,15 @@
 
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="recipes.html">Recipes</a>
+      <a href="recipes.html" aria-current="page">Recipes</a>
       <a href="details.html">Recipe Details</a>
       <a href="history.html">Recipe History</a>
       <a href="request.html">Recipe Request</a>
     </nav>
 
-    <div class="round-panel columns" role="region" aria-labelledby="recipesHeading">
+    <main class="round-panel columns" aria-labelledby="recipesHeading">
       <aside class="recipe-list" aria-labelledby="recipesHeading">
-        <h2 id="recipesHeading" style="margin-top:0; font-size:18px; color:#2b2b2b;">Recipe Index</h2>
+        <h2 id="recipesHeading" class="section-title">Recipe Index</h2>
         <ul>
           <li>Moroccan Spiced Chickpea Stew</li>
           <li>Indian Butter Lentils (Dal Makhani-Style)</li>
@@ -43,7 +43,7 @@
           <li>Ethiopian Red Lentil Stew (Misir Wot)</li>
           <li>Mexican Slow-Simmered Black Beans</li>
           <li>Thai Coconut Vegetable Curry</li>
-          <li>Italian Rustic Tomato & Herb Sauce</li>
+          <li>Italian Rustic Tomato &amp; Herb Sauce</li>
           <li>Latin American Arroz con Verduras</li>
           <li>Japanese-Inspired Miso Noodle Soup</li>
           <li>Mediterranean Lemon Garlic Potatoes</li>
@@ -52,8 +52,8 @@
       </aside>
 
       <section class="preview" aria-labelledby="previewHeading">
-        <div style="display:flex; align-items:center; gap:12px; width:100%; justify-content:space-between;">
-          <div id="previewHeading" style="font-weight:700; color:var(--text);">Details: Thai Green Curry</div>
+        <div class="preview-top">
+          <div id="previewHeading" class="preview-title">Details: Thai Green Curry</div>
           <div class="social-row" aria-hidden="true">
             <a href="#" title="Share on X">X</a>
             <a href="#" title="Share on Facebook">f</a>
@@ -61,19 +61,18 @@
           </div>
         </div>
 
-        <!-- preview image -->
-        <img src="images/thai-curry.png" alt="Thai Green Curry">
+        <img src="images/thai-curry.png" alt="Thai Green Curry" class="preview-image">
 
-        <div style="width:100%; display:flex; justify-content:flex-end; margin-top:10px;">
+        <div class="preview-actions">
           <a href="details.html" class="badge">View Full Recipe</a>
         </div>
       </section>
-    </div>
+    </main>
 
     <footer class="footer">
       <div>Adam Gregor</div>
-      <div>amgregor@email.sc.edu</div>
-      <div style="font-weight:700">www.Flavorswithborders.com</div>
+      <div><a href="mailto:amgregor@email.sc.edu">amgregor@email.sc.edu</a></div>
+      <div class="footer-strong">www.Flavorswithborders.com</div>
     </footer>
 
   </div>

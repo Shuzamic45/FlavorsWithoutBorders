@@ -7,50 +7,52 @@
     Assignment: GitHub Pages Site
   -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flavors Without Borders — Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
 
-    <!-- HEADER: logo left, title to the right; inline style retained for assignment -->
     <header class="header">
-      <img src="images/flavors-logo.png" alt="Flavors Without Borders Logo" class="logo" style="border:3px solid rgba(0,0,0,0.03);">
-      <div>
-        <h1 class="site-title" style="margin:0;">Flavor Without Borders</h1>
-        <div class="site-sub">Around the World with flavors</div>
+      <img src="images/flavors-logo.png" alt="Flavors Without Borders Logo" class="logo">
+      <div class="header-text">
+        <h1 class="site-title">Flavor Without Borders</h1>
+        <p class="site-sub">Around the World with flavors</p>
       </div>
     </header>
 
     <div class="hr" role="separator" aria-hidden="true"></div>
 
     <nav class="nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="recipes.html">Recipes</a>
       <a href="details.html">Recipe Details</a>
       <a href="history.html">Recipe History</a>
       <a href="request.html">Recipe Request</a>
     </nav>
 
-    <section class="round-panel" aria-labelledby="introHeading">
-      <h2 id="introHeading" style="margin-top:0; font-size:18px; color:#2b2b2b;">Welcome</h2>
-      <p style="font-size:16px; line-height:1.6;">
-        Welcome to <strong>Flavors Without Borders</strong>, where recipes travel the world and traditions meet at the table.
-        Explore authentic, time-honored dishes and the stories behind them. <span class="badge">New</span>
-      </p>
+    <main>
+      <section class="round-panel" aria-labelledby="introHeading">
+        <h2 id="introHeading" class="section-title">Welcome</h2>
+        <p class="lead">
+          Welcome to <strong>Flavors Without Borders</strong>, where recipes travel the world and traditions meet at the table.
+          Explore authentic, time-honored dishes and the stories behind them.
+          <span class="badge-inline">New</span>
+        </p>
 
-      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="badge" href="recipes.html">Browse Recipes</a>
-        <a class="badge" href="details.html">Featured: Thai Green Curry</a>
-        <a class="badge" href="request.html" style="background:linear-gradient(90deg,#ff7a18,#ffb33a);">Submit a Recipe</a>
-      </div>
-    </section>
+        <div class="button-row">
+          <a class="badge" href="recipes.html">Browse Recipes</a>
+          <a class="badge" href="details.html">Featured: Thai Green Curry</a>
+          <a class="badge badge-accent" href="request.html">Submit a Recipe</a>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div>Adam Gregor</div>
-      <div>amgregor@email.sc.edu</div>
-      <div style="font-weight:700">www.Flavorswithborders.com</div>
+      <div><a href="mailto:amgregor@email.sc.edu">amgregor@email.sc.edu</a></div>
+      <div class="footer-strong">www.Flavorswithborders.com</div>
     </footer>
 
   </div>
