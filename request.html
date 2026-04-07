@@ -77,6 +77,7 @@
       <h2 id="requestHeading" style="margin-top:0;">Request a Recipe</h2>
       <p style="color:var(--muted); line-height:1.6;">
         Want your family’s dish or a regional favorite featured here? Fill out the form and we’ll consider adding it.
+        This is a static form placeholder; to collect submissions you'll wire this to a backend or an email service.
       </p>
 
       <section class="request-panel" aria-labelledby="formHeading">
@@ -155,5 +156,42 @@
     </footer>
 
   </div>
+
+  <!-- JavaScript for Form Validation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("recipeRequest");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const dishInput = document.getElementById("dish");
+
+      form.addEventListener("submit", function (event) {
+        const errors = [];
+
+        // Name Validation
+        if (nameInput.value.length < 3) {
+          errors.push("Name must be at least 3 characters long.");
+        }
+
+        // Email Validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+          errors.push("Please enter a valid email address.");
+        }
+
+        // Dish Validation
+        if (dishInput.value.length < 3) {
+          errors.push("Dish name must be at least 3 characters long.");
+        }
+
+        // If errors exist, prevent form submission and show errors
+        if (errors.length > 0) {
+          event.preventDefault();
+          alert(errors.join("\n"));
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
